@@ -1,0 +1,50 @@
+body {
+  background-color: #777;
+}
+
+.social-icons {
+  display: flex;
+  flex-direction: column;
+}
+.social-icons a {
+  color: #000;
+  text-decoration: none;
+  font-family: roboto condensed;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  width: 125px;
+  height: 40px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: rgba(200, 200, 200, 0.1);
+}
+.social-icons a i {
+  margin-right: 5px;
+}
+
+#facebook-button {
+  color: #3b5998;
+  right: -100px;
+  top: 20px;
+}
+#facebook-button:hover {
+  right: 0;
+  transition: 0.4s;
+  color: #fff;
+  background-color: #3b5998;
+}
+
+#instagram-button {
+  top: 70px;
+  right: -100px;
+  color: #000;
+}
+#instagram-button:hover {
+  color: #fff;
+  background: radial-gradient(circle at 33% 100%, #fed373 4%, #f15245 30%, #d92e7f 62%, #9b36b7 85%, #515ecf);
+  right: 0;
+  transition: 0.4s;
+}

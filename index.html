@@ -1,0 +1,360 @@
+<!doctype html>
+<html lang="en">
+  <head>
+
+
+
+<style> 
+       
+body{
+  
+    -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 2s; /* Firefox < 16 */
+        -ms-animation: fadein 2s; /* Internet Explorer */
+         -o-animation: fadein 2s; /* Opera < 12.1 */
+            animation: fadein 2s;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+</style> 
+
+
+
+
+
+
+<style>
+
+#load{
+    width:100%;
+    height:100%;
+    position:fixed;
+    z-index:9999;
+    background:url("images/spinner.png") no-repeat center center rgba(255,192,203,1)
+}
+
+
+
+</style>
+
+ 
+<script>
+
+document.onreadystatechange = function () {
+  var state = document.readyState
+  if (state == 'interactive') {
+       document.getElementById('contents').style.visibility="hidden";
+  } else if (state == 'complete') {
+      setTimeout(function(){
+         document.getElementById('interactive');
+         document.getElementById('load').style.visibility="hidden";
+         document.getElementById('contents').style.visibility="visible";
+      },1000);
+  }
+}
+
+</script>
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+  
+
+    <!-- Required meta tags -->
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+  <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+
+
+<title>Carrie’s Events</title>
+
+<link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+<link rel="manifest" href="images/favicon/site.webmanifest">
+<link rel="mask-icon" href="images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+
+<style>
+
+.masthead {
+  height: 10vh;
+  min-height: 500px;
+  background-image: url('images/home.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+}
+
+
+
+<!-- FB Inst -->
+.social-icons {
+  display: flex;
+  flex-direction: column;
+}
+.social-icons a {
+  color: #000;
+  text-decoration: none;
+  font-family: roboto condensed;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  width: 145px;
+  height: 45px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: rgba(255,192,203,1);
+}
+.social-icons a i {
+  margin-right: 0px;
+}
+
+#facebook-button {
+  color: #3b5998;
+  right: -105px;
+  top: 100px;
+}
+#facebook-button:hover {
+  right: 0;
+  transition: 0.3s;
+  color: #fff;
+  background-color: #3b5998;
+}
+
+<!-- FB Inst -->
+
+
+
+
+
+
+
+</style>
+
+
+
+
+
+
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+
+  </head>
+
+  <body style="background-color: #F1ADC0;">
+
+
+<div id="load"></div>
+<div id="contents">
+         
+
+
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v7.0"></script>
+
+
+ <div class="social-icons">
+    <a href="https://www.facebook.com/carrie.harkiss/" id="facebook-button"><i class="fab fa-facebook-square fa-2x"></i> Facebook</a>
+  </div>
+
+<nav class="navbar sticky-top navbar-light" style="background-color: #FFC0CB;">
+  <div class="container">
+
+    <a class="navbar-brand pull-left img-responsive" href="index.html"> <img src="images/logo.PNG" style= "width: 40px;"></a></a>
+
+
+ 
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">Menu
+          <span class="navbar-toggler-icon"></span>
+        </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="index.html">Home
+                <span class="sr-only">(current)</span>
+              </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="candycart.html">Products</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="gallery.html">Gallery</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+  <header class="masthead text-center text-black">
+    <div class="masthead-content">
+      <div class="container">
+        <h1 class="masthead-heading mb-0">Carrie’s Events</h1>
+        <h2 class="masthead-subheading mb-0">Make Memorys to remember</h2>
+         <a href="about.html" class="btn btn-primary btn-xl rounded-pill mt-5">Learn More</a>
+      </div>
+    </div>
+  </header>
+
+
+<div data-aos="zoom-in">
+  <section>
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6 order-lg-2">
+          <div class="p-5">
+            <img class="img-fluid rounded-circle" src="images/pic01.jpg" alt="">
+          </div>
+        </div>
+        <div class="col-lg-6 order-lg-1">
+          <div class="p-5">
+<div data-aos="fade-right" data-aos-duration="2000">
+            <h2 class="display-4 text-white">Grab a donut</h2>
+</div>
+            <p></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<div data-aos="zoom-in">
+  <section>
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <div class="p-5">
+            <img class="img-fluid rounded-circle" src="images/moongate.jpg" alt="">
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="p-5">
+<div data-aos="fade-right" data-aos-duration="2000">
+            <h2 class="display-4 text-white">Take a selfie</h2>
+</div>
+            <p></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<div data-aos="zoom-in">
+  <section>
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6 order-lg-2">
+          <div class="p-5">
+            <img class="img-fluid rounded-circle" src="images/flowerwall2.jpg" alt="">
+          </div>
+        </div>
+        <div class="col-lg-6 order-lg-1">
+          <div class="p-5">
+<div data-aos="fade-right" data-aos-duration="2000">
+            <h2 class="display-4 text-white">Happy times</h2>
+</div>
+            <p></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+
+
+
+
+
+
+
+<!--Footer-->
+
+ <footer id="sticky-footer" class="py-4 bg-dark text-white-50">
+    <div class="container text-center">
+      <small>Copyright &copy; Carrie’s Events</small>
+  <a href="https://www.facebook.com/carrie.harkiss/" id="facebook-button"><i class="fab fa-facebook-square fa-2x"></i>acebook</a>
+
+<div class="fb-like" data-href="https://www.facebook.com/carrie.harkiss/" data-width="" data-layout="button" data-action="like" data-size="small" data-share="true"></div>
+
+    </div>
+  </footer>
+
+<!--Footer-->
+
+
+
+
+
+
+    </div>
+
+
+
+<script>
+  AOS.init();
+</script>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<script   src="https://code.jquery.com/jquery-3.5.1.js"integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="crossorigin="anonymous"></script>
+
+
+  </body>
+
+
+</html>
