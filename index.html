@@ -1,420 +1,471 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-
-
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-177325231-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-177325231-1');
-</script>
-
-
-
-
-
-
-<style> 
-       
-body{
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Carrie's Events - Magical Event Rentals</title>
+  <meta name="description" content="Transform your special day with Carrie's Events. We offer candy carts, flower walls, donut walls, and more to make your celebration truly magical.">
   
-    -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
-       -moz-animation: fadein 2s; /* Firefox < 16 */
-        -ms-animation: fadein 2s; /* Internet Explorer */
-         -o-animation: fadein 2s; /* Opera < 12.1 */
-            animation: fadein 2s;
-}
-
-@keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
-
-/* Firefox < 16 */
-@-moz-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
-
-/* Safari, Chrome and Opera > 12.1 */
-@-webkit-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
-
-/* Internet Explorer */
-@-ms-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
-
-/* Opera < 12.1 */
-@-o-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
-
-</style> 
-
-
-
-
-
-
-<style>
-
-#load{
-    width:100%;
-    height:100%;
-    position:fixed;
-    z-index:9999;
-    background:url("images/spinner.png") no-repeat center center rgba(255,192,203,1)
-}
-
-
-
-</style>
-
- 
-<script>
-
-document.onreadystatechange = function () {
-  var state = document.readyState
-  if (state == 'interactive') {
-       document.getElementById('contents').style.visibility="hidden";
-  } else if (state == 'complete') {
-      setTimeout(function(){
-         document.getElementById('interactive');
-         document.getElementById('load').style.visibility="hidden";
-         document.getElementById('contents').style.visibility="visible";
-      },1000);
-  }
-}
-
-</script>
-
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
   
-
-    <!-- Required meta tags -->
-
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   
+  <!-- CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <style>
+    :root {
+      --primary: #FFC0CB;
+      --secondary: #F1ADC0;
+      --dark: #333;
+      --light: #fff;
+      --gradient: linear-gradient(45deg, var(--primary), var(--secondary));
+    }
 
-  <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+    body {
+      font-family: 'Poppins', sans-serif;
+      overflow-x: hidden;
+      background-color: #fff0f2;
+    }
 
+    h1, h2, h3, h4, h5 {
+      font-family: 'Playfair Display', serif;
+    }
 
+    /* Modern Navigation */
+    .navbar {
+      padding: 1.5rem 0;
+      transition: all 0.3s ease;
+      background: rgba(255, 255, 255, 0.95) !important;
+      backdrop-filter: blur(10px);
+    }
 
+    .navbar.scrolled {
+      padding: 1rem 0;
+      box-shadow: 0 5px 30px rgba(0,0,0,0.1);
+    }
 
+    .navbar-brand img {
+      height: 50px;
+      transition: all 0.3s ease;
+    }
 
-<title>Carries Events</title>
-<meta name="Description" content="Carries Events truly magical, we have a moongate arch, large candy cart, small candy cart, Snack bar, Donut wall, welcome mirror, flower wall, treat stand, we can make your favours.">
-<meta name="Keywords" content="Wedding moongate event bigday celebration married hire flowerwall ">
+    .nav-link {
+      font-weight: 500;
+      padding: 0.5rem 1.2rem !important;
+      position: relative;
+      transition: all 0.3s ease;
+    }
 
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 0;
+      height: 2px;
+      background: var(--gradient);
+      transition: all 0.3s ease;
+      transform: translateX(-50%);
+    }
 
+    .nav-link:hover::after {
+      width: 80%;
+    }
 
+    /* Hero Section */
+    .hero {
+      height: 100vh;
+      min-height: 700px;
+      background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('images/candycart2.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      display: flex;
+      align-items: center;
+      position: relative;
+    }
 
+    .hero-content {
+      text-align: center;
+      color: white;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem;
+      position: relative;
+      z-index: 2;
+    }
 
+    .hero-title {
+      font-size: 4.5rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      text-shadow: 2px 2px 20px rgba(0,0,0,0.3);
+    }
 
-<link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
-<link rel="manifest" href="images/favicon/site.webmanifest">
-<link rel="mask-icon" href="images/favicon/safari-pinned-tab.svg" color="#5bbad5">
-<meta name="msapplication-TileColor" content="#da532c">
-<meta name="theme-color" content="#ffffff">
+    .hero-subtitle {
+      font-size: 1.8rem;
+      font-weight: 300;
+      margin-bottom: 2rem;
+      text-shadow: 1px 1px 10px rgba(0,0,0,0.3);
+    }
 
-<style>
+    /* Featured Products */
+    .featured-products {
+      padding: 8rem 0;
+      background: linear-gradient(135deg, rgba(255,255,255,0.95), rgba(255,192,203,0.1));
+    }
 
-.masthead {
-  height: 10vh;
-  min-height: 500px;
-  background-image: url('images/home.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+    .product-card {
+      background: rgba(255,255,255,0.9);
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+      transition: all 0.3s ease;
+      margin-bottom: 30px;
+    }
 
-}
+    .product-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+    }
 
+    .product-image {
+      height: 300px;
+      overflow: hidden;
+      position: relative;
+    }
 
+    .product-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: all 0.5s ease;
+    }
 
-<!-- FB Inst -->
-.social-icons {
-  display: flex;
-  flex-direction: column;
-}
-.social-icons a {
-  color: #000;
-  text-decoration: none;
-  font-family: roboto condensed;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  display: flex;
-  align-items: center;
-  position: fixed;
-  width: 145px;
-  height: 45px;
-  padding: 5px 10px;
-  border-radius: 5px;
-  background-color: rgba(255,192,203,1);
-}
-.social-icons a i {
-  margin-right: 0px;
-}
+    .product-card:hover .product-image img {
+      transform: scale(1.1);
+    }
 
-#facebook-button {
-  color: #3b5998;
-  right: -105px;
-  top: 100px;
-}
-#facebook-button:hover {
-  right: 0;
-  transition: 0.3s;
-  color: #fff;
-  background-color: #3b5998;
-}
+    .product-content {
+      padding: 2rem;
+      text-align: center;
+    }
 
-<!-- FB Inst -->
+    .product-title {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      color: var(--dark);
+    }
 
+    /* Call to Action */
+    .cta-section {
+      padding: 6rem 0;
+      background: var(--gradient);
+      color: white;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
 
+    .cta-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('images/pattern.png');
+      opacity: 0.1;
+    }
 
+    /* Buttons */
+    .btn-custom {
+      padding: 1rem 2.5rem;
+      border-radius: 50px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+    }
 
+    .btn-custom::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(255,255,255,0.2);
+      transform: translateX(-100%);
+      transition: all 0.3s ease;
+      z-index: -1;
+    }
 
+    .btn-custom:hover::before {
+      transform: translateX(0);
+    }
 
+    .btn-light {
+      background: white;
+      color: var(--primary);
+    }
 
-</style>
+    .btn-outline-light {
+      border: 2px solid white;
+      color: white;
+    }
 
+    .btn-outline-light:hover {
+      background: white;
+      color: var(--primary);
+    }
 
+    /* Footer */
+    .footer {
+      background: var(--dark);
+      padding: 4rem 0 2rem;
+      color: rgba(255,255,255,0.8);
+    }
 
+    .footer-title {
+      color: white;
+      margin-bottom: 1.5rem;
+      font-size: 1.2rem;
+    }
 
+    .footer-links {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
 
+    .footer-links li {
+      margin-bottom: 0.8rem;
+    }
 
-<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    .footer-links a {
+      color: rgba(255,255,255,0.8);
+      transition: all 0.3s ease;
+    }
 
+    .footer-links a:hover {
+      color: var(--primary);
+      text-decoration: none;
+      padding-left: 5px;
+    }
 
-  </head>
+    .social-links a {
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 50%;
+      text-align: center;
+      line-height: 40px;
+      color: white;
+      margin-right: 10px;
+      transition: all 0.3s ease;
+    }
 
+    .social-links a:hover {
+      background: var(--primary);
+      transform: translateY(-3px);
+    }
 
+    /* Animations */
+    [data-aos] {
+      pointer-events: none;
+    }
 
-<!--Start of Tawk.to Script-->
-<script type="text/javascript">
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/5f5674984704467e89ecdfd0/default';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
-</script>
-<!--End of Tawk.to Script-->
+    [data-aos].aos-animate {
+      pointer-events: auto;
+    }
 
-
-
-
-
-
-  <body style="background-color: #F1ADC0;">
-
-
-<div id="load"></div>
-<div id="contents">
-         
-
-
-<div id="fb-root"></div>
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v7.0"></script>
-
-
- <div class="social-icons">
-    <a href="https://www.facebook.com/carrie.harkiss/" id="facebook-button"><i class="fab fa-facebook-square fa-2x"></i> Facebook</a>
-  </div>
-
-<nav class="navbar sticky-top navbar-light" style="background-color: #FFC0CB;">
-  <div class="container">
-
-    <a class="navbar-brand pull-left img-responsive" href="index.html"> <img src="images/logo.PNG" style= "width: 40px;"></a></a>
-
-
- 
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">Menu
-          <span class="navbar-toggler-icon"></span>
-        </button>
-    <div class="collapse navbar-collapse" id="navbarResponsive">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="index.html">Home
-                <span class="sr-only">(current)</span>
-              </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="about.html">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="candycart.html">Products</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="gallery.html">Gallery</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="contact.html">Contact</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
-
-
-
-  <header class="masthead text-center text-white">
-    <div class="masthead-content">
-      <div class="container">
-        <h1 class="masthead-heading mb-0">Carrie’s Events</h1>
-        <h2 class="masthead-subheading mb-0">Make Memories to remember</h2>
-         <a href="about.html" class="btn btn-primary btn-xl rounded-pill mt-5">Learn More</a>
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero-title {
+        font-size: 3rem;
+      }
+      
+      .hero-subtitle {
+        font-size: 1.4rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="images/logo.PNG" alt="Carrie's Events">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="candycart.html">Products</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="gallery.html">Gallery</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
       </div>
     </div>
-  </header>
+  </nav>
 
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content" data-aos="fade-up">
+      <h1 class="hero-title">Make Your Event Magical</h1>
+      <p class="hero-subtitle">Transform your special day with our stunning event rentals</p>
+      <a href="candycart.html" class="btn btn-custom btn-light mr-3">Explore Products</a>
+      <a href="contact.html" class="btn btn-custom btn-outline-light">Get in Touch</a>
+    </div>
+  </section>
 
-<div data-aos="zoom-in">
-  <section>
+  <!-- Featured Products -->
+  <section class="featured-products">
     <div class="container">
-      <div class="row align-items-center">
-        <div class="col-lg-6 order-lg-2">
-          <div class="p-5">
-            <img class="img-fluid rounded-circle" src="images/pic01.jpg" alt="">
+      <h2 class="text-center mb-5" data-aos="fade-up">Our Popular Rentals</h2>
+      <div class="row">
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="product-card">
+            <div class="product-image">
+              <img src="images/candycart2.jpg" alt="Candy Cart">
+            </div>
+            <div class="product-content">
+              <h3 class="product-title">Candy Cart</h3>
+              <p>Perfect for weddings and special events</p>
+              <a href="candycart.html" class="btn btn-custom btn-light">Learn More</a>
+            </div>
           </div>
         </div>
-        <div class="col-lg-6 order-lg-1">
-          <div class="p-5">
-<div data-aos="fade-right" data-aos-duration="2000">
-            <h2 class="display-4 text-white">Grab a donut</h2>
-</div>
-            <p></p>
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="product-card">
+            <div class="product-image">
+              <img src="images/flowerwall2.jpg" alt="Flower Wall">
+            </div>
+            <div class="product-content">
+              <h3 class="product-title">Flower Wall</h3>
+              <p>Create stunning photo opportunities</p>
+              <a href="flowerwall.html" class="btn btn-custom btn-light">Learn More</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+          <div class="product-card">
+            <div class="product-image">
+              <img src="images/donutwall.jpg" alt="Donut Wall">
+            </div>
+            <div class="product-content">
+              <h3 class="product-title">Donut Wall</h3>
+              <p>A unique and delicious display</p>
+              <a href="donutwall.html" class="btn btn-custom btn-light">Learn More</a>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
-</div>
 
-<div data-aos="zoom-in">
-  <section>
+  <!-- Call to Action -->
+  <section class="cta-section">
     <div class="container">
-      <div class="row align-items-center">
-        <div class="col-lg-6">
-          <div class="p-5">
-            <img class="img-fluid rounded-circle" src="images/moongate.jpg" alt="">
-          </div>
-        </div>
-        <div class="col-lg-6">
-          <div class="p-5">
-<div data-aos="fade-right" data-aos-duration="2000">
-            <h2 class="display-4 text-white">Take a selfie</h2>
-</div>
-            <p></p>
-          </div>
+      <div class="row justify-content-center">
+        <div class="col-md-8 text-center">
+          <h2 class="mb-4" data-aos="fade-up">Ready to Make Your Event Special?</h2>
+          <p class="mb-4" data-aos="fade-up" data-aos-delay="100">Contact us today to discuss how we can help create unforgettable memories.</p>
+          <a href="contact.html" class="btn btn-custom btn-outline-light" data-aos="fade-up" data-aos-delay="200">Get Started</a>
         </div>
       </div>
     </div>
   </section>
-</div>
 
-<div data-aos="zoom-in">
-  <section>
+  <!-- Footer -->
+  <footer class="footer">
     <div class="container">
-      <div class="row align-items-center">
-        <div class="col-lg-6 order-lg-2">
-          <div class="p-5">
-            <img class="img-fluid rounded-circle" src="images/flowerwall2.jpg" alt="">
-          </div>
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <h4 class="footer-title">About Us</h4>
+          <p>Carrie's Events specializes in creating magical moments with our stunning event rentals and decorations.</p>
         </div>
-        <div class="col-lg-6 order-lg-1">
-          <div class="p-5">
-<div data-aos="fade-right" data-aos-duration="2000">
-            <h2 class="display-4 text-white">Happy times</h2>
-</div>
-            <p></p>
+        <div class="col-md-4 mb-4">
+          <h4 class="footer-title">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="candycart.html">Products</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4 mb-4">
+          <h4 class="footer-title">Connect With Us</h4>
+          <div class="social-links">
+            <a href="https://www.facebook.com/carrie.harkiss/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-pinterest"></i></a>
           </div>
         </div>
       </div>
-    </div>
-  </section>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!--Footer-->
-
- <footer id="sticky-footer" class="py-4 bg-dark text-white-50">
-    <div class="container text-center">
-      <small>Copyright &copy; Carrie’s Events</small>
-  <a href="https://www.facebook.com/carrie.harkiss/" id="facebook-button"><i class="fab fa-facebook-square fa-2x"></i>acebook</a>
-
-<div class="fb-like" data-href="https://www.facebook.com/carrie.harkiss/" data-width="" data-layout="button" data-action="like" data-size="small" data-share="true"></div>
-
+      <div class="text-center mt-4">
+        <small>Copyright © 2024 Carrie's Events. All rights reserved.</small>
+      </div>
     </div>
   </footer>
 
-<!--Footer-->
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  
+  <script>
+    // Initialize AOS
+    AOS.init({
+      duration: 800,
+      once: true
+    });
 
+    // Navbar Scroll Effect
+    $(window).scroll(function() {
+      if ($(window).scrollTop() > 50) {
+        $('.navbar').addClass('scrolled');
+      } else {
+        $('.navbar').removeClass('scrolled');
+      }
+    });
 
-
-
-
-
-    </div>
-
-
-
-<script>
-  AOS.init();
-</script>
-
-
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-<script   src="https://code.jquery.com/jquery-3.5.1.js"integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="crossorigin="anonymous"></script>
-
-
-
-
-
-
-
-  </body>
-
-
+    // Smooth Scroll
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
+</body>
 </html>

@@ -1,230 +1,425 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Contact Us - Carrie's Events</title>
+  <meta name="description" content="Get in touch with Carrie's Events for your special celebration needs. We'd love to hear from you!">
+  
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="contact/styleContact.css">
 
+  <style>
+    :root {
+      --primary: #FFC0CB;
+      --secondary: #F1ADC0;
+      --dark: #333;
+      --light: #fff;
+      --bg-light: #fff0f2;
+      --gradient: linear-gradient(45deg, var(--primary), var(--secondary));
+    }
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-177325231-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--bg-light);
+      overflow-x: hidden;
+    }
 
-  gtag('config', 'UA-177325231-1');
-</script>
+    h1, h2, h3, h4, h5 {
+      font-family: 'Playfair Display', serif;
+    }
 
+    /* Navigation */
+    .navbar {
+      padding: 1.5rem 0;
+      transition: all 0.3s ease;
+      background: rgba(255, 255, 255, 0.95) !important;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 5px 30px rgba(0,0,0,0.1);
+    }
 
+    .navbar-brand img {
+      height: 50px;
+      transition: all 0.3s ease;
+    }
 
-<style> 
-       
-body{
-    -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
-       -moz-animation: fadein 2s; /* Firefox < 16 */
-        -ms-animation: fadein 2s; /* Internet Explorer */
-         -o-animation: fadein 2s; /* Opera < 12.1 */
-            animation: fadein 2s;
-}
+    .nav-link {
+      font-weight: 500;
+      padding: 0.5rem 1.2rem !important;
+      position: relative;
+      transition: all 0.3s ease;
+    }
 
-@keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 0;
+      height: 2px;
+      background: var(--gradient);
+      transition: all 0.3s ease;
+      transform: translateX(-50%);
+    }
 
-/* Firefox < 16 */
-@-moz-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
+    .nav-link:hover::after {
+      width: 80%;
+    }
 
-/* Safari, Chrome and Opera > 12.1 */
-@-webkit-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
+    .dropdown-menu {
+      border: none;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      padding: 1rem 0;
+      background: rgba(255, 255, 255, 0.98);
+      backdrop-filter: blur(10px);
+    }
 
-/* Internet Explorer */
-@-ms-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
+    .dropdown-item {
+      font-weight: 500;
+      padding: 0.7rem 1.5rem;
+      transition: all 0.3s ease;
+      position: relative;
+    }
 
-/* Opera < 12.1 */
-@-o-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
+    .dropdown-item:hover {
+      background: var(--gradient);
+      color: var(--light);
+      transform: translateX(5px);
+    }
 
-</style> 
+    /* Contact Form Styles */
+    .contact-section {
+      padding: 8rem 0 4rem;
+      position: relative;
+    }
 
+    .contact-title {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      text-align: center;
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
 
+    .contact-subtitle {
+      text-align: center;
+      margin-bottom: 3rem;
+      color: var(--dark);
+      opacity: 0.8;
+    }
 
+    .form-elements {
+      background: rgba(255,255,255,0.9);
+      backdrop-filter: blur(10px);
+      border-radius: 30px;
+      padding: 3rem;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+      border: 1px solid rgba(255,255,255,0.5);
+    }
 
-<script src="pace/pace.js"></script>
-  <link href="pace/pace-theme.css" rel="stylesheet" />
+    .form-group {
+      position: relative;
+      margin-bottom: 2rem;
+    }
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="contact form example">
-  <title>contact</title>
+    .form-control {
+      width: 100%;
+      padding: 1rem;
+      border: 2px solid rgba(0,0,0,0.1);
+      border-radius: 15px;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+      background: rgba(255,255,255,0.9);
+    }
+
+    .form-label {
+      position: absolute;
+      left: 1rem;
+      top: 1rem;
+      padding: 0 0.5rem;
+      color: #666;
+      cursor: text;
+      transition: all 0.3s ease;
+      background: rgba(255,255,255,0.9);
+      border-radius: 5px;
+    }
+
+    .form-control:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 4px rgba(255,192,203,0.2);
+      outline: none;
+    }
+
+    .form-control:focus + .form-label,
+    .form-control:not(:placeholder-shown) + .form-label {
+      transform: translateY(-2.5rem) scale(0.8);
+      color: var(--primary);
+    }
+
+    .submit-button {
+      width: 100%;
+      padding: 1rem;
+      border: none;
+      border-radius: 15px;
+      background: linear-gradient(45deg, var(--primary), var(--secondary));
+      color: white;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .submit-button::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+      transition: all 0.5s ease;
+    }
+
+    .submit-button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    }
+
+    .submit-button:hover::before {
+      left: 100%;
+    }
+
+    .social-links {
+      text-align: center;
+      margin-top: 2rem;
+    }
+
+    .social-link {
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+      text-align: center;
+      border-radius: 50%;
+      background: var(--gradient);
+      color: white;
+      margin: 0 10px;
+      transition: all 0.3s ease;
+    }
+
+    .social-link:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      color: white;
+      text-decoration: none;
+    }
+
+    /* Footer */
+    .footer {
+      background: var(--dark);
+      padding: 2rem 0;
+      color: var(--light);
+      margin-top: 4rem;
+    }
+  </style>
 </head>
 
-
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
-
-
-<style>
-
-.btn-facebook {
-	  background: #3B5998;
-	  border-radius: 0;
-	  color: #fff;
-	  border-width: 1px;
-	  border-style: solid;
-	  border-color: #263961; 
-	}
-	.btn-facebook:link, .btn-facebook:visited {
-	  color: #fff;
-	}
-	.btn-facebook:active, .btn-facebook:hover {
-	  background: #263961;
-	  color: #fff;
-	}
-
-</style>
-
-
 <body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="images/logo.png" alt="Carrie's Events">
+      </a>
 
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-
-
-
-
-<nav class="navbar sticky-top navbar-light" style="background-color: #FFC0CB;">
-  <div class="container">
-
-    <a class="navbar-brand pull-left img-responsive" href="index.html"> <img src="images/logo.PNG" style= "width: 40px;"></a></a>
-
-
- 
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">Menu
-          <span class="navbar-toggler-icon"></span>
-
-        </button>
-    <div class="collapse navbar-collapse" id="navbarResponsive">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="contact.html">Contact
-                <span class="sr-only">(current)</span>
-              </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="about.html">About</a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="candycart.html">Products</a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="gallery.html">Gallery</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="index.html">Home</a>
-        </li>
-      </ul>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="productsDropdown" role="button" data-toggle="dropdown">
+              Products
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="candycart.html">Candy Cart</a>
+              <a class="dropdown-item" href="smallcandycart.html">Small Candy Cart</a>
+              <a class="dropdown-item" href="donutwall.html">Donut Wall</a>
+              <a class="dropdown-item" href="flowerwall.html">Flower Wall</a>
+              <a class="dropdown-item" href="mirror.html">Welcome Mirror</a>
+              <a class="dropdown-item" href="snackbar.html">Snack Bar</a>
+              <a class="dropdown-item" href="moongate.html">Moongate Arch</a>
+              <a class="dropdown-item" href="shotwall.html">Shot Wall</a>
+              <a class="dropdown-item" href="babyblocks.html">Baby Blocks</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="gallery.html">Gallery</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+        </ul>
+      </div>
     </div>
-  </div>
-</nav>
+  </nav>
 
+  <!-- Contact Section -->
+  <section class="contact-section">
+    <div class="container">
+      <h1 class="contact-title" data-aos="fade-up">Get in Touch</h1>
+      <p class="contact-subtitle" data-aos="fade-up" data-aos-delay="100">We'd love to hear from you! Send us a message and we'll respond as soon as possible.</p>
 
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <form class="gform" method="POST" data-email="example@email.net"
+            action="https://script.google.com/macros/s/AKfycbxW_YG8auSoP-Hq_b0XwJOz89SqzAErw_N34k1ZUg/exec" data-aos="fade-up" data-aos-delay="200">
+            
+            <div class="form-elements">
+              <div class="form-group">
+                <input type="text" class="form-control" id="name" name="name" placeholder=" " required>
+                <label for="name" class="form-label">Your Name</label>
+              </div>
 
+              <div class="form-group">
+                <input type="email" class="form-control" id="email" name="email" placeholder=" " required>
+                <label for="email" class="form-label">Email Address</label>
+              </div>
 
-<div class="container">
-     
+              <div class="form-group">
+                <textarea class="form-control" id="message" name="message" rows="5" placeholder=" " required></textarea>
+                <label for="message" class="form-label">Your Message</label>
+              </div>
 
-  <h2 class="content-head is-center">Contact Us!</h2>
-  <aside>
-       <p>
+              <div class="form-group honeypot-field">
+                <label for="honeypot">To help avoid spam, utilize a Honeypot technique with a hidden text field; must be empty to submit the form! Otherwise, we assume the user is a spam bot.</label>
+                <input id="honeypot" type="text" name="honeypot" value="">
+              </div>
 
-<a href="https://www.facebook.com/carrie.harkiss/" title="Facebook" class="btn btn-facebook btn-lg float-right"><i class="fa fa-facebook fa-fw"></i> Facebook</a>
+              <button type="submit" class="submit-button">
+                <i class="fa fa-paper-plane"></i> Send Message
+              </button>
+            </div>
 
-           Carrie’s Events would <em>love</em> to hear from you! </p>
-           <p>Please use the <b><em>Contact Form</em></b> or Facebook
-           to send us a message.
+            <div class="thankyou_message" style="display:none;">
+              <div class="alert alert-success text-center mt-4">
+                <h4>Thank You!</h4>
+                <p>Your message has been sent successfully. We'll get back to you soon!</p>
+              </div>
+            </div>
+          </form>
 
-       </p>
-   </aside>
-
-<!-- START HERE -->
-   <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css">
-   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-   <!-- Style The Contact Form How Ever You Prefer -->
-
-   <link rel="stylesheet" href="contact/styleContact.css">
-
-  <form class="gform pure-form pure-form-stacked" method="POST" data-email="example@email.net"
-  action="https://script.google.com/macros/s/AKfycbxW_YG8auSoP-Hq_b0XwJOz89SqzAErw_N34k1ZUg/exec">
-    <!-- change the form action to your script url -->
-
-    <div class="form-elements">
-      <fieldset class="pure-group">
-        <label for="name">Name: </label>
-        <input id="name" name="name" placeholder="Hello, what is your name" />
-      </fieldset>
-
-      <fieldset class="pure-group">
-        <label for="message">Message: </label>
-        <textarea id="message" name="message" rows="10"
-        placeholder="How can we help you..."></textarea>
-      </fieldset>
-
-      <fieldset class="pure-group">
-        <label for="email"><em>Your</em> Email Address:</label>
-        <input id="email" name="email" type="email" value=""
-        required placeholder="your.name@email.com"/>
-      </fieldset>
-
-      <fieldset class="pure-group">
-        <label for="color">Favourite Color: </label>
-        <input id="color" name="color" placeholder="pink" />
-      </fieldset>
-
-      <fieldset class="pure-group honeypot-field">
-        <label for="honeypot">To help avoid spam, utilize a Honeypot technique with a hidden text field; must be empty to submit the form! Otherwise, we assume the user is a spam bot.</label>
-        <input id="honeypot" type="text" name="honeypot" value="" />
-      </fieldset>
-
-      <button class="button-success pure-button button-xlarge">
-        <i class="fa fa-paper-plane"></i>&nbsp;Send</button>
+          <div class="social-links" data-aos="fade-up" data-aos-delay="300">
+            <a href="https://www.facebook.com/carrie.harkiss/" class="social-link" target="_blank">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.instagram.com/carrieharkiss" class="social-link" target="_blank">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
+  </section>
 
-    <!-- Customise the Thankyou Message People See when they submit the form: -->
-    <div class="thankyou_message" style="display:none;">
-      <h2><em>Thanks</em> for contacting us!
-        We will get back to you soon!</h2>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container text-center">
+      <small>Copyright © 2024 Carrie's Events. All rights reserved.</small>
     </div>
+  </footer>
 
-  </form>
-
-  <!-- Submit the Form to Google Using "AJAX" -->
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script data-cfasync="false" src="contact/form-submission-handler.js"></script>
-<!-- END -->
+  
+  <script>
+    // Initialize AOS
+    AOS.init({
+      duration: 800,
+      once: true
+    });
 
-    </div> 
+    // Form validation
+    document.addEventListener('DOMContentLoaded', function() {
+      const form = document.querySelector('.gform');
+      const inputs = form.querySelectorAll('.form-control');
 
+      inputs.forEach(input => {
+        input.addEventListener('blur', function() {
+          validateInput(this);
+        });
+      });
 
+      form.addEventListener('submit', function(e) {
+        let isValid = true;
+        inputs.forEach(input => {
+          if (!validateInput(input)) {
+            isValid = false;
+          }
+        });
 
+        if (!isValid) {
+          e.preventDefault();
+        }
+      });
 
+      function validateInput(input) {
+        const value = input.value.trim();
+        let isValid = true;
 
+        if (value === '') {
+          setInvalid(input, 'This field is required');
+          isValid = false;
+        } else if (input.type === 'email' && !isValidEmail(value)) {
+          setInvalid(input, 'Please enter a valid email address');
+          isValid = false;
+        } else {
+          setValid(input);
+        }
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        return isValid;
+      }
 
+      function setInvalid(input, message) {
+        input.classList.add('is-invalid');
+        input.classList.remove('is-valid');
+        const feedback = input.nextElementSibling;
+        if (feedback && feedback.classList.contains('invalid-feedback')) {
+          feedback.textContent = message;
+        }
+      }
+
+      function setValid(input) {
+        input.classList.remove('is-invalid');
+        input.classList.add('is-valid');
+      }
+
+      function isValidEmail(email) {
+        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+      }
+    });
+  </script>
 </body>
 </html>
 
