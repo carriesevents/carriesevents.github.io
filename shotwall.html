@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Shot Wall - Carrie's Events</title>
-  <meta name="description" content="Elegant shot wall rental for weddings and special events from Carrie's Events. Add a unique and fun element to your celebration.">
+  <meta name="description" content="Unique Shot Wall rental for parties and special events from Carrie's Events. Add a fun and interactive element to your celebration.">
   
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -18,51 +18,8 @@
 </head>
 
 <body>
-  <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-light fixed-top">
-    <div class="container">
-      <a class="navbar-brand" href="index.html">
-        <img src="images/logo.png" alt="Carrie's Events">
-      </a>
-
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="index.html">Home</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle active" href="#" id="productsDropdown" role="button" data-toggle="dropdown">
-              Products
-            </a>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" href="candycart.html">Candy Cart</a>
-              <a class="dropdown-item" href="smallcandycart.html">Small Candy Cart</a>
-              <a class="dropdown-item" href="donutwall.html">Donut Wall</a>
-              <a class="dropdown-item" href="flowerwall.html">Flower Wall</a>
-              <a class="dropdown-item" href="mirror.html">Welcome Mirror</a>
-              <a class="dropdown-item" href="snackbar.html">Snack Bar</a>
-              <a class="dropdown-item" href="moongate.html">Moongate Arch</a>
-              <a class="dropdown-item active" href="shotwall.html">Shot Wall</a>
-              <a class="dropdown-item" href="babyblocks.html">Baby Blocks</a>
-            </div>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="gallery.html">Gallery</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="contact.html">Contact</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="about.html">About</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+  <!-- Navigation placeholder -->
+  <div id="navbar"></div>
 
   <!-- Product Content -->
   <section class="product-section">
@@ -77,9 +34,9 @@
         <div class="product-info">
           <div class="product-header">
             <h1 class="product-title">Shot Wall</h1>
-            <p class="product-price">Hire from £70</p>
+            <p class="product-price">Hire from £60</p>
             <p class="product-description">
-              Add a unique and entertaining element to your celebration with our Shot Wall. Perfect for weddings, parties, and special events, this eye-catching display allows your guests to grab their drinks in style. Can be customized with your choice of shots and decorated to match your theme.
+              Add a unique and interactive element to your party with our Shot Wall. Perfect for weddings, birthdays, and celebrations, this fun display allows guests to grab their drinks in style. Can be customized with your choice of shots and decorations.
             </p>
           </div>
 
@@ -87,11 +44,11 @@
             <h3>Details</h3>
             <ul class="list-unstyled">
               <li><i class="fas fa-check"></i>Full day hire included</li>
-              <li><i class="fas fa-check"></i>Dimensions: H:120cm x W:80cm</li>
-              <li><i class="fas fa-check"></i>Holds up to 40 shots</li>
-              <li><i class="fas fa-check"></i>Customizable decoration</li>
+              <li><i class="fas fa-check"></i>Holds up to 35 shots</li>
+              <li><i class="fas fa-check"></i>Customizable design</li>
+              <li><i class="fas fa-check"></i>Shot glasses included</li>
               <li><i class="fas fa-check"></i>Setup and collection included</li>
-              <li><i class="fas fa-check"></i>Shot glasses provided</li>
+              <li><i class="fas fa-check"></i>Perfect party entertainment</li>
             </ul>
           </div>
 
@@ -103,20 +60,8 @@
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container text-center">
-      <div class="mb-3">
-        <a href="https://www.facebook.com/carrie.harkiss/" class="social-link" target="_blank">
-          <i class="fab fa-facebook"></i>
-        </a>
-        <a href="https://www.instagram.com/carrieharkiss" class="social-link" target="_blank">
-          <i class="fab fa-instagram"></i>
-        </a>
-      </div>
-      <small>Copyright © 2024 Carrie's Events. All rights reserved.</small>
-    </div>
-  </footer>
+  <!-- Footer placeholder -->
+  <div id="footer"></div>
 
   <!-- Scripts -->
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
@@ -124,12 +69,19 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="lightbox/lightbox-plus-jquery.js"></script>
+  <script src="js/navbar.js"></script>
+  <script src="js/footer.js"></script>
   
   <script>
     // Initialize AOS
     AOS.init({
       duration: 800,
       once: true
+    });
+
+    // Initialize dropdowns
+    $(document).ready(function() {
+      $('.dropdown-toggle').dropdown();
     });
   </script>
 </body>

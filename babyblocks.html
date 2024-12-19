@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Baby Blocks - Carrie's Events</title>
-  <meta name="description" content="Beautiful baby blocks rental for baby showers and gender reveals from Carrie's Events. Create a stunning display for your special celebration.">
+  <meta name="description" content="Charming Baby Blocks rental for baby showers and celebrations from Carrie's Events. Create a delightful display for your special occasion.">
   
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -18,51 +18,8 @@
 </head>
 
 <body>
-  <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-light fixed-top">
-    <div class="container">
-      <a class="navbar-brand" href="index.html">
-        <img src="images/logo.png" alt="Carrie's Events">
-      </a>
-
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="index.html">Home</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle active" href="#" id="productsDropdown" role="button" data-toggle="dropdown">
-              Products
-            </a>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" href="candycart.html">Candy Cart</a>
-              <a class="dropdown-item" href="smallcandycart.html">Small Candy Cart</a>
-              <a class="dropdown-item" href="donutwall.html">Donut Wall</a>
-              <a class="dropdown-item" href="flowerwall.html">Flower Wall</a>
-              <a class="dropdown-item" href="mirror.html">Welcome Mirror</a>
-              <a class="dropdown-item" href="snackbar.html">Snack Bar</a>
-              <a class="dropdown-item" href="moongate.html">Moongate Arch</a>
-              <a class="dropdown-item" href="shotwall.html">Shot Wall</a>
-              <a class="dropdown-item active" href="babyblocks.html">Baby Blocks</a>
-            </div>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="gallery.html">Gallery</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="contact.html">Contact</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="about.html">About</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+  <!-- Navigation placeholder -->
+  <div id="navbar"></div>
 
   <!-- Product Content -->
   <section class="product-section">
@@ -79,7 +36,7 @@
             <h1 class="product-title">Baby Blocks</h1>
             <p class="product-price">Hire from £50</p>
             <p class="product-description">
-              Make your baby shower or gender reveal extra special with our beautiful Baby Blocks display. These oversized decorative blocks can be arranged to spell out your baby's name or create a stunning backdrop. Perfect for photos and creating a magical atmosphere for your celebration.
+              Add a charming touch to your baby shower or celebration with our adorable Baby Blocks. These oversized decorative blocks can be arranged to spell out your baby's name or create a delightful display. Perfect for photo opportunities and creating lasting memories of your special day.
             </p>
           </div>
 
@@ -87,11 +44,11 @@
             <h3>Details</h3>
             <ul class="list-unstyled">
               <li><i class="fas fa-check"></i>Full day hire included</li>
-              <li><i class="fas fa-check"></i>Individual block size: 30cm x 30cm</li>
-              <li><i class="fas fa-check"></i>Choice of colors available</li>
+              <li><i class="fas fa-check"></i>Large decorative blocks</li>
               <li><i class="fas fa-check"></i>Customizable arrangement</li>
+              <li><i class="fas fa-check"></i>Choice of colors available</li>
               <li><i class="fas fa-check"></i>Setup and collection included</li>
-              <li><i class="fas fa-check"></i>Perfect photo opportunity</li>
+              <li><i class="fas fa-check"></i>Perfect for baby showers</li>
             </ul>
           </div>
 
@@ -103,20 +60,8 @@
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container text-center">
-      <div class="mb-3">
-        <a href="https://www.facebook.com/carrie.harkiss/" class="social-link" target="_blank">
-          <i class="fab fa-facebook"></i>
-        </a>
-        <a href="https://www.instagram.com/carrieharkiss" class="social-link" target="_blank">
-          <i class="fab fa-instagram"></i>
-        </a>
-      </div>
-      <small>Copyright © 2024 Carrie's Events. All rights reserved.</small>
-    </div>
-  </footer>
+  <!-- Footer placeholder -->
+  <div id="footer"></div>
 
   <!-- Scripts -->
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
@@ -124,12 +69,19 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="lightbox/lightbox-plus-jquery.js"></script>
+  <script src="js/navbar.js"></script>
+  <script src="js/footer.js"></script>
   
   <script>
     // Initialize AOS
     AOS.init({
       duration: 800,
       once: true
+    });
+
+    // Initialize dropdowns
+    $(document).ready(function() {
+      $('.dropdown-toggle').dropdown();
     });
   </script>
 </body>

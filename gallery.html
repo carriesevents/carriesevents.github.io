@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Gallery - Carrie's Events</title>
-  <meta name="description" content="View our beautiful event rentals and past events gallery at Carrie's Events. Get inspired for your special celebration.">
+  <meta name="description" content="Browse our gallery of stunning event hire items and decorations. See how we've helped create magical moments for weddings and special occasions.">
   
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -14,365 +14,88 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link href="lightbox/lightbox.css" rel="stylesheet">
-  <link rel="stylesheet" href="images/gallery.css">
-
-  <style>
-    :root {
-      --primary: #FFC0CB;
-      --secondary: #F1ADC0;
-      --dark: #333;
-      --light: #fff;
-      --bg-light: #fff0f2;
-      --gradient: linear-gradient(45deg, var(--primary), var(--secondary));
-    }
-
-    body {
-      font-family: 'Poppins', sans-serif;
-      background-color: var(--bg-light);
-      overflow-x: hidden;
-    }
-
-    h1, h2, h3, h4, h5 {
-      font-family: 'Playfair Display', serif;
-    }
-
-    /* Navigation */
-    .navbar {
-      padding: 1.5rem 0;
-      transition: all 0.3s ease;
-      background: rgba(255, 255, 255, 0.95) !important;
-      backdrop-filter: blur(10px);
-      box-shadow: 0 5px 30px rgba(0,0,0,0.1);
-    }
-
-    .navbar-brand img {
-      height: 50px;
-      transition: all 0.3s ease;
-    }
-
-    .nav-link {
-      font-weight: 500;
-      padding: 0.5rem 1.2rem !important;
-      position: relative;
-      transition: all 0.3s ease;
-    }
-
-    .nav-link::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 50%;
-      width: 0;
-      height: 2px;
-      background: var(--gradient);
-      transition: all 0.3s ease;
-      transform: translateX(-50%);
-    }
-
-    .nav-link:hover::after {
-      width: 80%;
-    }
-
-    .dropdown-menu {
-      border: none;
-      border-radius: 15px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-      padding: 1rem 0;
-      background: rgba(255, 255, 255, 0.98);
-      backdrop-filter: blur(10px);
-    }
-
-    .dropdown-item {
-      font-weight: 500;
-      padding: 0.7rem 1.5rem;
-      transition: all 0.3s ease;
-      position: relative;
-    }
-
-    .dropdown-item:hover {
-      background: var(--gradient);
-      color: var(--light);
-      transform: translateX(5px);
-    }
-
-    .dropdown-item.active {
-      background: var(--gradient);
-      color: var(--light);
-    }
-
-    /* Gallery Specific Styles */
-    .gallery-section {
-      padding: 8rem 0 4rem;
-    }
-
-    .gallery-title {
-      font-size: 2.5rem;
-      margin-bottom: 3rem;
-      text-align: center;
-      background: var(--gradient);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-
-    #gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 2rem;
-      padding: 0;
-    }
-
-    .gallery-item {
-      position: relative;
-      border-radius: 15px;
-      overflow: hidden;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-      cursor: pointer;
-      transition: all 0.3s ease;
-    }
-
-    .gallery-item:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 15px 40px rgba(0,0,0,0.2);
-    }
-
-    .gallery-item img {
-      width: 100%;
-      height: 300px;
-      object-fit: cover;
-      transition: all 0.5s ease;
-    }
-
-    .gallery-item:hover img {
-      transform: scale(1.1);
-    }
-
-    /* Footer */
-    .footer {
-      background: var(--dark);
-      padding: 2rem 0;
-      color: var(--light);
-      margin-top: 4rem;
-    }
-
-    .social-link {
-      color: var(--light);
-      margin: 0 10px;
-      font-size: 1.5rem;
-      transition: all 0.3s ease;
-    }
-
-    .social-link:hover {
-      color: var(--primary);
-      transform: translateY(-3px);
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-  <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-light fixed-top">
-    <div class="container">
-      <a class="navbar-brand" href="index.html">
-        <img src="images/logo.png" alt="Carrie's Events">
-      </a>
+  <!-- Navigation placeholder -->
+  <div id="navbar"></div>
 
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="index.html">Home</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="productsDropdown" role="button" data-toggle="dropdown">
-              Products
-            </a>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" href="candycart.html">Candy Cart</a>
-              <a class="dropdown-item" href="smallcandycart.html">Small Candy Cart</a>
-              <a class="dropdown-item" href="donutwall.html">Donut Wall</a>
-              <a class="dropdown-item" href="flowerwall.html">Flower Wall</a>
-              <a class="dropdown-item" href="mirror.html">Welcome Mirror</a>
-              <a class="dropdown-item" href="snackbar.html">Snack Bar</a>
-              <a class="dropdown-item" href="moongate.html">Moongate Arch</a>
-              <a class="dropdown-item" href="shotwall.html">Shot Wall</a>
-              <a class="dropdown-item" href="babyblocks.html">Baby Blocks</a>
-            </div>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="gallery.html">Gallery</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="contact.html">Contact</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="about.html">About</a>
-          </li>
-        </ul>
-      </div>
+  <!-- Gallery Header -->
+  <section class="gallery-header">
+    <div class="container text-center">
+      <h1 data-aos="fade-up">Our Gallery</h1>
+      <p data-aos="fade-up" data-aos-delay="200">A showcase of our stunning event hire items and decorations</p>
     </div>
-  </nav>
+  </section>
 
-  <!-- Gallery Section -->
-  <section class="gallery-section">
+  <!-- Gallery Grid -->
+  <section class="gallery-grid">
     <div class="container">
-      <h1 class="gallery-title" data-aos="fade-up">Our Gallery</h1>
-
-      <div class="row" id="gallery" data-toggle="modal" data-target="#exampleModal">
-        <div class="gallery-item" data-aos="fade-up">
-          <img class="img-fluid" src="images/smallcart.jpg" alt="Small Candy Cart" data-target="#carouselExample" data-slide-to="0">
+      <div class="row">
+        <div class="col-md-4 gallery-item" data-aos="fade-up">
+          <a href="images/candycart2.jpg" data-lightbox="gallery" data-title="Candy Cart">
+            <img src="images/candycart2.jpg" alt="Candy Cart" class="img-fluid">
+            <div class="gallery-overlay">
+              <h3>Candy Cart</h3>
+            </div>
+          </a>
         </div>
-        <div class="gallery-item" data-aos="fade-up" data-aos-delay="100">
-          <img class="img-fluid" src="images/snackbar.jpg" alt="Snack Bar" data-target="#carouselExample" data-slide-to="1">
+        <div class="col-md-4 gallery-item" data-aos="fade-up" data-aos-delay="200">
+          <a href="images/flowerwall4.jpg" data-lightbox="gallery" data-title="Flower Wall">
+            <img src="images/flowerwall4.jpg" alt="Flower Wall" class="img-fluid">
+            <div class="gallery-overlay">
+              <h3>Flower Wall</h3>
+            </div>
+          </a>
         </div>
-        <div class="gallery-item" data-aos="fade-up" data-aos-delay="200">
-          <img class="img-fluid" src="images/pic01.jpg" alt="Event Setup" data-target="#carouselExample" data-slide-to="2">
+        <div class="col-md-4 gallery-item" data-aos="fade-up" data-aos-delay="400">
+          <a href="images/mirror.jpg" data-lightbox="gallery" data-title="Welcome Mirror">
+            <img src="images/mirror.jpg" alt="Welcome Mirror" class="img-fluid">
+            <div class="gallery-overlay">
+              <h3>Welcome Mirror</h3>
+            </div>
+          </a>
         </div>
-        <div class="gallery-item" data-aos="fade-up">
-          <img class="img-fluid" src="images/pic011.jpg" alt="Event Setup" data-target="#carouselExample" data-slide-to="3">
+        <div class="col-md-4 gallery-item" data-aos="fade-up">
+          <a href="images/moongate.jpg" data-lightbox="gallery" data-title="Moongate Arch">
+            <img src="images/moongate.jpg" alt="Moongate Arch" class="img-fluid">
+            <div class="gallery-overlay">
+              <h3>Moongate Arch</h3>
+            </div>
+          </a>
         </div>
-        <div class="gallery-item" data-aos="fade-up" data-aos-delay="100">
-          <img class="img-fluid" src="images/pic010.jpg" alt="Event Setup" data-target="#carouselExample" data-slide-to="4">
+        <div class="col-md-4 gallery-item" data-aos="fade-up" data-aos-delay="200">
+          <a href="images/donutwall.jpg" data-lightbox="gallery" data-title="Donut Wall">
+            <img src="images/donutwall.jpg" alt="Donut Wall" class="img-fluid">
+            <div class="gallery-overlay">
+              <h3>Donut Wall</h3>
+            </div>
+          </a>
         </div>
-        <div class="gallery-item" data-aos="fade-up" data-aos-delay="200">
-          <img class="img-fluid" src="images/pic012.jpg" alt="Event Setup" data-target="#carouselExample" data-slide-to="5">
-        </div>
-        <div class="gallery-item" data-aos="fade-up">
-          <img class="img-fluid" src="images/pic03.jpg" alt="Event Setup" data-target="#carouselExample" data-slide-to="6">
-        </div>
-        <div class="gallery-item" data-aos="fade-up" data-aos-delay="100">
-          <img class="img-fluid" src="images/shotwall.jpg" alt="Shot Wall" data-target="#carouselExample" data-slide-to="7">
-        </div>
-        <div class="gallery-item" data-aos="fade-up" data-aos-delay="200">
-          <img class="img-fluid" src="images/mirror.jpg" alt="Welcome Mirror" data-target="#carouselExample" data-slide-to="8">
-        </div>
-        <div class="gallery-item" data-aos="fade-up">
-          <img class="img-fluid" src="images/moongate.jpg" alt="Moongate Arch" data-target="#carouselExample" data-slide-to="9">
-        </div>
-        <div class="gallery-item" data-aos="fade-up" data-aos-delay="100">
-          <img class="img-fluid" src="images/donutwall.jpg" alt="Donut Wall" data-target="#carouselExample" data-slide-to="10">
-        </div>
-        <div class="gallery-item" data-aos="fade-up" data-aos-delay="200">
-          <img class="img-fluid" src="images/candycart2.jpg" alt="Candy Cart" data-target="#carouselExample" data-slide-to="11">
-        </div>
-        <div class="gallery-item" data-aos="fade-up">
-          <img class="img-fluid" src="images/flowerwall3.jpg" alt="Flower Wall" data-target="#carouselExample" data-slide-to="12">
-        </div>
-        <div class="gallery-item" data-aos="fade-up" data-aos-delay="100">
-          <img class="img-fluid" src="images/flowerwall2.jpg" alt="Flower Wall" data-target="#carouselExample" data-slide-to="13">
-        </div>
-        <div class="gallery-item" data-aos="fade-up" data-aos-delay="200">
-          <img class="img-fluid" src="images/flowerwall4.jpg" alt="Flower Wall" data-target="#carouselExample" data-slide-to="14">
+        <div class="col-md-4 gallery-item" data-aos="fade-up" data-aos-delay="400">
+          <a href="images/shotwall.jpg" data-lightbox="gallery" data-title="Shot Wall">
+            <img src="images/shotwall.jpg" alt="Shot Wall" class="img-fluid">
+            <div class="gallery-overlay">
+              <h3>Shot Wall</h3>
+            </div>
+          </a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Modal -->
-  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog modal-lg" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <div id="carouselExample" class="carousel slide" data-ride="carousel">
-            <ol class="carousel-indicators">
-              <li data-target="#carouselExample" data-slide-to="0" class="active"></li>
-              <li data-target="#carouselExample" data-slide-to="1"></li>
-              <li data-target="#carouselExample" data-slide-to="2"></li>
-              <li data-target="#carouselExample" data-slide-to="3"></li>
-              <li data-target="#carouselExample" data-slide-to="4"></li>
-              <li data-target="#carouselExample" data-slide-to="5"></li>
-              <li data-target="#carouselExample" data-slide-to="6"></li>
-              <li data-target="#carouselExample" data-slide-to="7"></li>
-              <li data-target="#carouselExample" data-slide-to="8"></li>
-              <li data-target="#carouselExample" data-slide-to="9"></li>
-              <li data-target="#carouselExample" data-slide-to="10"></li>
-              <li data-target="#carouselExample" data-slide-to="11"></li>
-              <li data-target="#carouselExample" data-slide-to="12"></li>
-              <li data-target="#carouselExample" data-slide-to="13"></li>
-              <li data-target="#carouselExample" data-slide-to="14"></li>
-            </ol>
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img class="d-block w-100" src="images/smallcart.jpg" alt="Small Candy Cart">
-              </div>
-              <div class="carousel-item">
-                <img class="d-block w-100" src="images/snackbar.jpg" alt="Snack Bar">
-              </div>
-              <div class="carousel-item">
-                <img class="d-block w-100" src="images/pic01.jpg" alt="Event Setup">
-              </div>
-              <div class="carousel-item">
-                <img class="d-block w-100" src="images/pic011.jpg" alt="Event Setup">
-              </div>
-              <div class="carousel-item">
-                <img class="d-block w-100" src="images/pic010.jpg" alt="Event Setup">
-              </div>
-              <div class="carousel-item">
-                <img class="d-block w-100" src="images/pic012.jpg" alt="Event Setup">
-              </div>
-              <div class="carousel-item">
-                <img class="d-block w-100" src="images/pic03.jpg" alt="Event Setup">
-              </div>
-              <div class="carousel-item">
-                <img class="d-block w-100" src="images/shotwall.jpg" alt="Shot Wall">
-              </div>
-              <div class="carousel-item">
-                <img class="d-block w-100" src="images/mirror.jpg" alt="Welcome Mirror">
-              </div>
-              <div class="carousel-item">
-                <img class="d-block w-100" src="images/moongate.jpg" alt="Moongate Arch">
-              </div>
-              <div class="carousel-item">
-                <img class="d-block w-100" src="images/donutwall.jpg" alt="Donut Wall">
-              </div>
-              <div class="carousel-item">
-                <img class="d-block w-100" src="images/candycart2.jpg" alt="Candy Cart">
-              </div>
-              <div class="carousel-item">
-                <img class="d-block w-100" src="images/flowerwall3.jpg" alt="Flower Wall">
-              </div>
-              <div class="carousel-item">
-                <img class="d-block w-100" src="images/flowerwall2.jpg" alt="Flower Wall">
-              </div>
-              <div class="carousel-item">
-                <img class="d-block w-100" src="images/flowerwall4.jpg" alt="Flower Wall">
-              </div>
-            </div>
-            <a class="carousel-control-prev" href="#carouselExample" role="button" data-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExample" role="button" data-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="sr-only">Next</span>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Footer -->
-  <footer class="footer">
+  <!-- Call to Action -->
+  <section class="cta-section">
     <div class="container text-center">
-      <div class="mb-3">
-        <a href="https://www.facebook.com/carrie.harkiss/" class="social-link" target="_blank">
-          <i class="fab fa-facebook"></i>
-        </a>
-        <a href="https://www.instagram.com/carrieharkiss" class="social-link" target="_blank">
-          <i class="fab fa-instagram"></i>
-        </a>
-      </div>
-      <small>Copyright © 2024 Carrie's Events. All rights reserved.</small>
+      <h2 data-aos="fade-up">Ready to Make Your Event Special?</h2>
+      <p data-aos="fade-up" data-aos-delay="200">Contact us today to discuss your requirements</p>
+      <a href="contact.html" class="cta-btn" data-aos="fade-up" data-aos-delay="400">Get in Touch</a>
     </div>
-  </footer>
+  </section>
+
+  <!-- Footer placeholder -->
+  <div id="footer"></div>
 
   <!-- Scripts -->
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
@@ -380,6 +103,8 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="lightbox/lightbox-plus-jquery.js"></script>
+  <script src="js/navbar.js"></script>
+  <script src="js/footer.js"></script>
   
   <script>
     // Initialize AOS
@@ -388,13 +113,9 @@
       once: true
     });
 
-    // Navbar scroll effect
-    $(window).scroll(function() {
-      if ($(window).scrollTop() > 50) {
-        $('.navbar').addClass('scrolled');
-      } else {
-        $('.navbar').removeClass('scrolled');
-      }
+    // Initialize dropdowns
+    $(document).ready(function() {
+      $('.dropdown-toggle').dropdown();
     });
   </script>
 </body>

@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>About Carrie's Events - Our Story</title>
-  <meta name="description" content="Learn about Carrie's Events and our journey in creating magical moments for special occasions with our stunning event rentals and decorations.">
+  <title>About Us - Carrie's Events</title>
+  <meta name="description" content="Learn about Carrie's Events, your premier event hire service in Edinburgh. We specialize in creating unforgettable moments for weddings and special occasions.">
   
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -13,308 +13,68 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
-  <style>
-    :root {
-      --primary: #FFC0CB;
-      --secondary: #F1ADC0;
-      --dark: #333;
-      --light: #fff;
-      --gradient: linear-gradient(45deg, var(--primary), var(--secondary));
-    }
-
-    body {
-      font-family: 'Poppins', sans-serif;
-      overflow-x: hidden;
-      background-color: #fff0f2;
-    }
-
-    h1, h2, h3, h4, h5 {
-      font-family: 'Playfair Display', serif;
-    }
-
-    /* Modern Navigation */
-    .navbar {
-      padding: 1.5rem 0;
-      transition: all 0.3s ease;
-      background: rgba(255, 255, 255, 0.95) !important;
-      backdrop-filter: blur(10px);
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    }
-
-    .navbar-brand img {
-      height: 50px;
-      transition: all 0.3s ease;
-    }
-
-    .nav-link {
-      font-weight: 500;
-      padding: 0.5rem 1.2rem !important;
-      position: relative;
-      transition: all 0.3s ease;
-    }
-
-    .nav-link::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 50%;
-      width: 0;
-      height: 2px;
-      background: var(--gradient);
-      transition: all 0.3s ease;
-      transform: translateX(-50%);
-    }
-
-    .nav-link:hover::after {
-      width: 80%;
-    }
-
-    /* Hero Section */
-    .about-hero {
-      position: relative;
-      height: 60vh;
-      min-height: 500px;
-      background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('images/about01.jpg');
-      background-size: cover;
-      background-position: center;
-      background-attachment: fixed;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      color: white;
-    }
-
-    .about-hero::before {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      height: 150px;
-      background: linear-gradient(to top, #fff0f2, transparent);
-    }
-
-    .hero-logo {
-      width: 180px;
-      height: 180px;
-      background: rgba(255,255,255,0.9);
-      padding: 2rem;
-      border-radius: 50%;
-      margin-bottom: 2rem;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-    }
-
-    /* Story Section */
-    .story-section {
-      padding: 6rem 0;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .story-section::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(135deg, rgba(255,192,203,0.1), rgba(255,255,255,0.1));
-      transform: skewY(-5deg);
-      transform-origin: top left;
-    }
-
-    .story-content {
-      position: relative;
-      z-index: 1;
-      background: rgba(255,255,255,0.95);
-      padding: 3rem;
-      border-radius: 30px;
-      box-shadow: 0 20px 50px rgba(0,0,0,0.1);
-      backdrop-filter: blur(10px);
-    }
-
-    .story-title {
-      font-size: 2.5rem;
-      margin-bottom: 2rem;
-      background: var(--gradient);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-
-    .story-text {
-      font-size: 1.1rem;
-      line-height: 1.8;
-      color: var(--dark);
-      margin-bottom: 2rem;
-    }
-
-    /* Contact Section */
-    .contact-section {
-      padding: 6rem 0;
-      background: var(--gradient);
-      color: white;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .contact-section::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: url('images/pattern.png');
-      opacity: 0.1;
-    }
-
-    .contact-card {
-      background: rgba(255,255,255,0.1);
-      backdrop-filter: blur(10px);
-      border-radius: 20px;
-      padding: 2rem;
-      text-align: center;
-      transition: all 0.3s ease;
-    }
-
-    .contact-card:hover {
-      transform: translateY(-10px);
-      background: rgba(255,255,255,0.2);
-    }
-
-    .contact-icon {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-    }
-
-    .contact-link {
-      color: white;
-      text-decoration: none;
-      transition: all 0.3s ease;
-    }
-
-    .contact-link:hover {
-      color: rgba(255,255,255,0.8);
-      text-decoration: none;
-    }
-
-    /* Footer */
-    .footer {
-      background: var(--dark);
-      padding: 4rem 0 2rem;
-      color: rgba(255,255,255,0.8);
-    }
-
-    .footer-title {
-      color: white;
-      margin-bottom: 1.5rem;
-      font-size: 1.2rem;
-    }
-
-    .social-links a {
-      display: inline-block;
-      width: 40px;
-      height: 40px;
-      background: rgba(255,255,255,0.1);
-      border-radius: 50%;
-      text-align: center;
-      line-height: 40px;
-      color: white;
-      margin-right: 10px;
-      transition: all 0.3s ease;
-    }
-
-    .social-links a:hover {
-      background: var(--primary);
-      transform: translateY(-3px);
-    }
-
-    @media (max-width: 768px) {
-      .story-title {
-        font-size: 2rem;
-      }
-      
-      .story-text {
-        font-size: 1rem;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-  <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-light">
-    <div class="container">
-      <a class="navbar-brand" href="index.html">
-        <img src="images/logo.PNG" alt="Carrie's Events">
-      </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="index.html">Home</a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="about.html">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="candycart.html">Products</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="gallery.html">Gallery</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="contact.html">Contact</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+  <!-- Navigation placeholder -->
+  <div id="navbar"></div>
 
   <!-- Hero Section -->
   <section class="about-hero">
     <div class="container">
-      <div class="text-center" data-aos="fade-up">
-        <img src="images/logo.PNG" alt="Carrie's Events Logo" class="hero-logo">
-        <h1 class="display-4 mb-4">Our Story</h1>
+      <div class="hero-content text-center">
+        <h1 data-aos="fade-up">Our Story</h1>
+        <p data-aos="fade-up" data-aos-delay="200">Creating magical moments for your special occasions</p>
       </div>
     </div>
   </section>
 
-  <!-- Story Section -->
-  <section class="story-section">
+  <!-- About Content -->
+  <section class="about-content">
     <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-lg-10">
-          <div class="story-content" data-aos="fade-up">
-            <h2 class="story-title text-center">Creating Magical Moments</h2>
-            <p class="story-text">
-              Carrie's Events is an events business dedicated to making your special occasions truly magical. Since our inception in June 2019, we've grown to offer a wide range of stunning rentals including:
-            </p>
-            <div class="row mb-4">
-              <div class="col-md-6">
-                <ul class="list-unstyled">
-                  <li><i class="fas fa-star text-primary mr-2"></i> Moongate Arch</li>
-                  <li><i class="fas fa-star text-primary mr-2"></i> Large & Small Candy Carts</li>
-                  <li><i class="fas fa-star text-primary mr-2"></i> Snack Bar</li>
-                  <li><i class="fas fa-star text-primary mr-2"></i> Donut Wall</li>
-                </ul>
-              </div>
-              <div class="col-md-6">
-                <ul class="list-unstyled">
-                  <li><i class="fas fa-star text-primary mr-2"></i> Welcome Mirror</li>
-                  <li><i class="fas fa-star text-primary mr-2"></i> Flower Wall</li>
-                  <li><i class="fas fa-star text-primary mr-2"></i> Treat Stand</li>
-                  <li><i class="fas fa-star text-primary mr-2"></i> Custom Favors</li>
-                </ul>
-              </div>
-            </div>
-            <p class="story-text">
-              We also specialize in creating beautiful hampers, sweet & chocolate boxes, and seasonal gifts throughout the year. Our passion is helping you create unforgettable memories, and we would love to be a part of your special day or event.
-            </p>
+      <div class="row align-items-center">
+        <div class="col-lg-6" data-aos="fade-right">
+          <div class="about-image">
+            <img src="images/candycart2.jpg" alt="Carrie's Events" class="img-fluid">
+          </div>
+        </div>
+        <div class="col-lg-6" data-aos="fade-left">
+          <div class="about-text">
+            <h2>Welcome to Carrie's Events</h2>
+            <p>At Carrie's Events, we believe that every celebration deserves to be extraordinary. Since our establishment, we've been dedicated to transforming venues and creating unforgettable experiences for weddings, parties, and special occasions throughout Edinburgh.</p>
+            <p>Our carefully curated collection of event hire items combines elegance with creativity, ensuring your event stands out. From our vintage candy carts to stunning flower walls, each piece is selected and maintained with the utmost care to exceed your expectations.</p>
+            <p>We pride ourselves on our attention to detail, professional service, and commitment to making your vision come to life. Our team works closely with you to understand your needs and deliver a seamless experience from start to finish.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Values Section -->
+  <section class="values-section">
+    <div class="container">
+      <h2 class="text-center mb-5" data-aos="fade-up">Why Choose Us</h2>
+      <div class="row">
+        <div class="col-md-4" data-aos="fade-up">
+          <div class="value-card">
+            <i class="fas fa-heart"></i>
+            <h3>Passion for Excellence</h3>
+            <p>We're dedicated to creating perfect moments and exceeding expectations with every event.</p>
+          </div>
+        </div>
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="value-card">
+            <i class="fas fa-star"></i>
+            <h3>Quality Service</h3>
+            <p>Professional, reliable, and attentive service from start to finish.</p>
+          </div>
+        </div>
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="400">
+          <div class="value-card">
+            <i class="fas fa-gem"></i>
+            <h3>Attention to Detail</h3>
+            <p>Every detail is carefully considered to ensure your event is perfect.</p>
           </div>
         </div>
       </div>
@@ -323,54 +83,34 @@
 
   <!-- Contact Section -->
   <section class="contact-section">
-    <div class="container">
-      <h2 class="text-center mb-5" data-aos="fade-up">Get in Touch</h2>
-      <div class="row">
-        <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
-          <div class="contact-card">
-            <i class="fas fa-map-marker-alt contact-icon"></i>
-            <h3 class="h5 mb-3">Location</h3>
-            <p class="mb-0">Troon, Ayrshire, Scotland</p>
-          </div>
-        </div>
-        <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
-          <div class="contact-card">
-            <i class="far fa-envelope contact-icon"></i>
-            <h3 class="h5 mb-3">Email</h3>
-            <a href="mailto:carriesevents@gmail.com" class="contact-link">carriesevents@gmail.com</a>
-          </div>
-        </div>
-        <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="300">
-          <div class="contact-card">
-            <i class="fab fa-instagram contact-icon"></i>
-            <h3 class="h5 mb-3">Social Media</h3>
-            <div class="social-links">
-              <a href="https://www.facebook.com/carrie.harkiss/" target="_blank"><i class="fab fa-facebook-f"></i></a>
-              <a href="https://www.instagram.com/carrieharkiss" target="_blank"><i class="fab fa-instagram"></i></a>
-            </div>
-          </div>
-        </div>
-      </div>
+    <div class="container text-center">
+      <h2 data-aos="fade-up">Let's Create Something Special</h2>
+      <p data-aos="fade-up" data-aos-delay="200">Ready to start planning your event? Get in touch with us today.</p>
+      <a href="contact.html" class="cta-btn" data-aos="fade-up" data-aos-delay="400">Contact Us</a>
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container text-center">
-      <small>Copyright © 2024 Carrie's Events. All rights reserved.</small>
-    </div>
-  </footer>
+  <!-- Footer placeholder -->
+  <div id="footer"></div>
 
   <!-- Scripts -->
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="js/navbar.js"></script>
+  <script src="js/footer.js"></script>
   
   <script>
+    // Initialize AOS
     AOS.init({
       duration: 800,
       once: true
+    });
+
+    // Initialize dropdowns
+    $(document).ready(function() {
+      $('.dropdown-toggle').dropdown();
     });
   </script>
 </body>

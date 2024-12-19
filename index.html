@@ -3,13 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Carrie's Events - Magical Event Rentals</title>
-  <meta name="description" content="Transform your special day with Carrie's Events. We offer candy carts, flower walls, donut walls, and more to make your celebration truly magical.">
-  
-  <!-- Favicon -->
-  <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+  <title>Carrie's Events - Event Hire Services in Edinburgh</title>
+  <meta name="description" content="Carrie's Events offers a wide range of event hire services in Edinburgh including candy carts, flower walls, welcome mirrors, and more for weddings and special occasions.">
   
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -18,371 +13,60 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
-  <style>
-    :root {
-      --primary: #FFC0CB;
-      --secondary: #F1ADC0;
-      --dark: #333;
-      --light: #fff;
-      --gradient: linear-gradient(45deg, var(--primary), var(--secondary));
-    }
-
-    body {
-      font-family: 'Poppins', sans-serif;
-      overflow-x: hidden;
-      background-color: #fff0f2;
-    }
-
-    h1, h2, h3, h4, h5 {
-      font-family: 'Playfair Display', serif;
-    }
-
-    /* Modern Navigation */
-    .navbar {
-      padding: 1.5rem 0;
-      transition: all 0.3s ease;
-      background: rgba(255, 255, 255, 0.95) !important;
-      backdrop-filter: blur(10px);
-    }
-
-    .navbar.scrolled {
-      padding: 1rem 0;
-      box-shadow: 0 5px 30px rgba(0,0,0,0.1);
-    }
-
-    .navbar-brand img {
-      height: 50px;
-      transition: all 0.3s ease;
-    }
-
-    .nav-link {
-      font-weight: 500;
-      padding: 0.5rem 1.2rem !important;
-      position: relative;
-      transition: all 0.3s ease;
-    }
-
-    .nav-link::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 50%;
-      width: 0;
-      height: 2px;
-      background: var(--gradient);
-      transition: all 0.3s ease;
-      transform: translateX(-50%);
-    }
-
-    .nav-link:hover::after {
-      width: 80%;
-    }
-
-    /* Hero Section */
-    .hero {
-      height: 100vh;
-      min-height: 700px;
-      background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('images/candycart2.jpg');
-      background-size: cover;
-      background-position: center;
-      background-attachment: fixed;
-      display: flex;
-      align-items: center;
-      position: relative;
-    }
-
-    .hero-content {
-      text-align: center;
-      color: white;
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 2rem;
-      position: relative;
-      z-index: 2;
-    }
-
-    .hero-title {
-      font-size: 4.5rem;
-      font-weight: 700;
-      margin-bottom: 1.5rem;
-      text-shadow: 2px 2px 20px rgba(0,0,0,0.3);
-    }
-
-    .hero-subtitle {
-      font-size: 1.8rem;
-      font-weight: 300;
-      margin-bottom: 2rem;
-      text-shadow: 1px 1px 10px rgba(0,0,0,0.3);
-    }
-
-    /* Featured Products */
-    .featured-products {
-      padding: 8rem 0;
-      background: linear-gradient(135deg, rgba(255,255,255,0.95), rgba(255,192,203,0.1));
-    }
-
-    .product-card {
-      background: rgba(255,255,255,0.9);
-      border-radius: 20px;
-      overflow: hidden;
-      box-shadow: 0 15px 35px rgba(0,0,0,0.1);
-      transition: all 0.3s ease;
-      margin-bottom: 30px;
-    }
-
-    .product-card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 20px 50px rgba(0,0,0,0.2);
-    }
-
-    .product-image {
-      height: 300px;
-      overflow: hidden;
-      position: relative;
-    }
-
-    .product-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: all 0.5s ease;
-    }
-
-    .product-card:hover .product-image img {
-      transform: scale(1.1);
-    }
-
-    .product-content {
-      padding: 2rem;
-      text-align: center;
-    }
-
-    .product-title {
-      font-size: 1.5rem;
-      margin-bottom: 1rem;
-      color: var(--dark);
-    }
-
-    /* Call to Action */
-    .cta-section {
-      padding: 6rem 0;
-      background: var(--gradient);
-      color: white;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .cta-section::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: url('images/pattern.png');
-      opacity: 0.1;
-    }
-
-    /* Buttons */
-    .btn-custom {
-      padding: 1rem 2.5rem;
-      border-radius: 50px;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      transition: all 0.3s ease;
-      position: relative;
-      overflow: hidden;
-      z-index: 1;
-    }
-
-    .btn-custom::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(255,255,255,0.2);
-      transform: translateX(-100%);
-      transition: all 0.3s ease;
-      z-index: -1;
-    }
-
-    .btn-custom:hover::before {
-      transform: translateX(0);
-    }
-
-    .btn-light {
-      background: white;
-      color: var(--primary);
-    }
-
-    .btn-outline-light {
-      border: 2px solid white;
-      color: white;
-    }
-
-    .btn-outline-light:hover {
-      background: white;
-      color: var(--primary);
-    }
-
-    /* Footer */
-    .footer {
-      background: var(--dark);
-      padding: 4rem 0 2rem;
-      color: rgba(255,255,255,0.8);
-    }
-
-    .footer-title {
-      color: white;
-      margin-bottom: 1.5rem;
-      font-size: 1.2rem;
-    }
-
-    .footer-links {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-
-    .footer-links li {
-      margin-bottom: 0.8rem;
-    }
-
-    .footer-links a {
-      color: rgba(255,255,255,0.8);
-      transition: all 0.3s ease;
-    }
-
-    .footer-links a:hover {
-      color: var(--primary);
-      text-decoration: none;
-      padding-left: 5px;
-    }
-
-    .social-links a {
-      display: inline-block;
-      width: 40px;
-      height: 40px;
-      background: rgba(255,255,255,0.1);
-      border-radius: 50%;
-      text-align: center;
-      line-height: 40px;
-      color: white;
-      margin-right: 10px;
-      transition: all 0.3s ease;
-    }
-
-    .social-links a:hover {
-      background: var(--primary);
-      transform: translateY(-3px);
-    }
-
-    /* Animations */
-    [data-aos] {
-      pointer-events: none;
-    }
-
-    [data-aos].aos-animate {
-      pointer-events: auto;
-    }
-
-    /* Responsive */
-    @media (max-width: 768px) {
-      .hero-title {
-        font-size: 3rem;
-      }
-      
-      .hero-subtitle {
-        font-size: 1.4rem;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-  <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-light fixed-top">
-    <div class="container">
-      <a class="navbar-brand" href="index.html">
-        <img src="images/logo.PNG" alt="Carrie's Events">
-      </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="index.html">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="about.html">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="candycart.html">Products</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="gallery.html">Gallery</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="contact.html">Contact</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+  <!-- Navigation placeholder -->
+  <div id="navbar"></div>
 
   <!-- Hero Section -->
   <section class="hero">
-    <div class="hero-content" data-aos="fade-up">
-      <h1 class="hero-title">Make Your Event Magical</h1>
-      <p class="hero-subtitle">Transform your special day with our stunning event rentals</p>
-      <a href="candycart.html" class="btn btn-custom btn-light mr-3">Explore Products</a>
-      <a href="contact.html" class="btn btn-custom btn-outline-light">Get in Touch</a>
+    <div class="hero-content">
+      <h1 data-aos="fade-up">Make Your Event Unforgettable</h1>
+      <p data-aos="fade-up" data-aos-delay="200">Stunning event hire services for weddings and special occasions</p>
+      <a href="#featured-products" class="cta-btn" data-aos="fade-up" data-aos-delay="400">Explore Our Products</a>
     </div>
   </section>
 
   <!-- Featured Products -->
-  <section class="featured-products">
+  <section id="featured-products" class="featured-products">
     <div class="container">
-      <h2 class="text-center mb-5" data-aos="fade-up">Our Popular Rentals</h2>
+      <h2 class="section-title" data-aos="fade-up">Our Popular Products</h2>
       <div class="row">
-        <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="col-md-4" data-aos="fade-up">
           <div class="product-card">
             <div class="product-image">
-              <img src="images/candycart2.jpg" alt="Candy Cart">
+              <img src="images/candycart.jpg" alt="Candy Cart">
             </div>
-            <div class="product-content">
-              <h3 class="product-title">Candy Cart</h3>
-              <p>Perfect for weddings and special events</p>
-              <a href="candycart.html" class="btn btn-custom btn-light">Learn More</a>
+            <div class="product-info">
+              <h3>Candy Cart</h3>
+              <p>A beautiful vintage cart filled with your favorite sweets</p>
+              <a href="candycart.html" class="btn-view">View Details</a>
             </div>
           </div>
         </div>
         <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
           <div class="product-card">
             <div class="product-image">
-              <img src="images/flowerwall2.jpg" alt="Flower Wall">
+              <img src="images/flowerwall4.jpg" alt="Flower Wall">
             </div>
-            <div class="product-content">
-              <h3 class="product-title">Flower Wall</h3>
-              <p>Create stunning photo opportunities</p>
-              <a href="flowerwall.html" class="btn btn-custom btn-light">Learn More</a>
+            <div class="product-info">
+              <h3>Flower Wall</h3>
+              <p>Create stunning photo opportunities with our elegant backdrop</p>
+              <a href="flowerwall.html" class="btn-view">View Details</a>
             </div>
           </div>
         </div>
-        <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="400">
           <div class="product-card">
             <div class="product-image">
-              <img src="images/donutwall.jpg" alt="Donut Wall">
+              <img src="images/mirror.jpg" alt="Welcome Mirror">
             </div>
-            <div class="product-content">
-              <h3 class="product-title">Donut Wall</h3>
-              <p>A unique and delicious display</p>
-              <a href="donutwall.html" class="btn btn-custom btn-light">Learn More</a>
+            <div class="product-info">
+              <h3>Welcome Mirror</h3>
+              <p>Add elegance with our personalized welcome mirror</p>
+              <a href="mirror.html" class="btn-view">View Details</a>
             </div>
           </div>
         </div>
@@ -392,54 +76,23 @@
 
   <!-- Call to Action -->
   <section class="cta-section">
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-md-8 text-center">
-          <h2 class="mb-4" data-aos="fade-up">Ready to Make Your Event Special?</h2>
-          <p class="mb-4" data-aos="fade-up" data-aos-delay="100">Contact us today to discuss how we can help create unforgettable memories.</p>
-          <a href="contact.html" class="btn btn-custom btn-outline-light" data-aos="fade-up" data-aos-delay="200">Get Started</a>
-        </div>
-      </div>
+    <div class="container text-center">
+      <h2 data-aos="fade-up">Ready to Make Your Event Special?</h2>
+      <p data-aos="fade-up" data-aos-delay="200">Contact us today to discuss your requirements</p>
+      <a href="contact.html" class="cta-btn" data-aos="fade-up" data-aos-delay="400">Get in Touch</a>
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-4 mb-4">
-          <h4 class="footer-title">About Us</h4>
-          <p>Carrie's Events specializes in creating magical moments with our stunning event rentals and decorations.</p>
-        </div>
-        <div class="col-md-4 mb-4">
-          <h4 class="footer-title">Quick Links</h4>
-          <ul class="footer-links">
-            <li><a href="candycart.html">Products</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </div>
-        <div class="col-md-4 mb-4">
-          <h4 class="footer-title">Connect With Us</h4>
-          <div class="social-links">
-            <a href="https://www.facebook.com/carrie.harkiss/" target="_blank"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-pinterest"></i></a>
-          </div>
-        </div>
-      </div>
-      <div class="text-center mt-4">
-        <small>Copyright © 2024 Carrie's Events. All rights reserved.</small>
-      </div>
-    </div>
-  </footer>
+  <!-- Footer placeholder -->
+  <div id="footer"></div>
 
   <!-- Scripts -->
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="js/navbar.js"></script>
+  <script src="js/footer.js"></script>
   
   <script>
     // Initialize AOS
@@ -448,23 +101,9 @@
       once: true
     });
 
-    // Navbar Scroll Effect
-    $(window).scroll(function() {
-      if ($(window).scrollTop() > 50) {
-        $('.navbar').addClass('scrolled');
-      } else {
-        $('.navbar').removeClass('scrolled');
-      }
-    });
-
-    // Smooth Scroll
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-          behavior: 'smooth'
-        });
-      });
+    // Initialize dropdowns
+    $(document).ready(function() {
+      $('.dropdown-toggle').dropdown();
     });
   </script>
 </body>
