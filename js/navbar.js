@@ -1,3 +1,11 @@
+// Adjust viewport scale for mobile devices
+if (window.innerWidth <= 768) {
+  const viewport = document.querySelector('meta[name="viewport"]');
+  if (viewport) {
+    viewport.content = 'width=device-width, initial-scale=0.9, shrink-to-fit=no';
+  }
+}
+
 // Create and inject the navbar HTML
 const navbarHtml = `
   <nav class="navbar navbar-expand-lg navbar-light fixed-top">
