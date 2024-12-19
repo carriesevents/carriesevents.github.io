@@ -3,7 +3,7 @@ const navbarHtml = `
   <nav class="navbar navbar-expand-lg navbar-light fixed-top">
     <div class="container">
       <a class="navbar-brand" href="index.html">
-        <img src="images/logo.png" alt="Carrie's Events">
+        <img src="logo.png" alt="Carrie's Events">
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
         <span></span>
@@ -12,7 +12,7 @@ const navbarHtml = `
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <div class="mobile-nav-header">
-          <img src="images/logo.png" alt="Carrie's Events" class="mobile-logo">
+          <img src="logo.png" alt="Carrie's Events" class="mobile-logo">
           <button class="close-nav" data-toggle="collapse" data-target="#navbarNav">
             <i class="fas fa-times"></i>
           </button>
@@ -107,10 +107,12 @@ document.addEventListener('DOMContentLoaded', function() {
   // Handle mobile menu open/close
   toggler.addEventListener('click', function() {
     document.body.classList.toggle('nav-open');
+    navbarCollapse.classList.toggle('show');
   });
   
   closeNav.addEventListener('click', function() {
     document.body.classList.remove('nav-open');
+    navbarCollapse.classList.remove('show');
   });
   
   // Close mobile menu when clicking outside
@@ -124,14 +126,14 @@ document.addEventListener('DOMContentLoaded', function() {
   });
   
   // Handle dropdown on mobile
-  if (window.innerWidth < 992) {
-    const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
-    dropdownToggles.forEach(toggle => {
-      toggle.addEventListener('click', function(e) {
+  const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+  dropdownToggles.forEach(toggle => {
+    toggle.addEventListener('click', function(e) {
+      if (window.innerWidth < 992) {
         e.preventDefault();
         const dropdownMenu = this.nextElementSibling;
         dropdownMenu.classList.toggle('show');
-      });
+      }
     });
-  }
+  });
 }); 
