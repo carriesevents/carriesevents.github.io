@@ -399,3 +399,155 @@ h1, h2, h3, h4, h5 {
     height: 250px;
   }
 } 
+
+/* Mobile Navigation */
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100vh;
+    background: white;
+    padding: 2rem;
+    transition: all 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    z-index: 1000;
+  }
+
+  .navbar-collapse.show {
+    right: 0;
+  }
+
+  body.nav-open {
+    overflow: hidden;
+  }
+
+  .navbar-toggler {
+    border: none;
+    padding: 0;
+    outline: none !important;
+    z-index: 1001;
+  }
+
+  .navbar-toggler span {
+    display: block;
+    width: 25px;
+    height: 2px;
+    background: var(--dark);
+    margin: 5px 0;
+    transition: all 0.4s ease;
+    transform-origin: 5px 50%;
+  }
+
+  body.nav-open .navbar-toggler span:nth-child(1) {
+    transform: rotate(45deg);
+  }
+
+  body.nav-open .navbar-toggler span:nth-child(2) {
+    opacity: 0;
+  }
+
+  body.nav-open .navbar-toggler span:nth-child(3) {
+    transform: rotate(-45deg);
+  }
+
+  .mobile-nav-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+  }
+
+  .mobile-logo {
+    height: 40px;
+  }
+
+  .close-nav {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--dark);
+    padding: 0.5rem;
+  }
+
+  .navbar-nav {
+    flex: 1;
+  }
+
+  .nav-item {
+    margin: 0.5rem 0;
+  }
+
+  .nav-link {
+    font-size: 1.2rem;
+    padding: 1rem 0 !important;
+  }
+
+  .dropdown-menu {
+    position: static !important;
+    transform: none !important;
+    background: none;
+    border: none;
+    box-shadow: none;
+    padding: 0 0 0 1rem;
+    margin: 0;
+  }
+
+  .dropdown-item {
+    padding: 0.7rem 1rem;
+    color: var(--dark);
+  }
+
+  .mobile-nav-footer {
+    margin-top: auto;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(0,0,0,0.1);
+  }
+
+  .mobile-nav-footer .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .mobile-nav-footer .social-links a {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--gradient);
+    color: white;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+  }
+
+  .mobile-nav-footer .social-links a:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  }
+}
+
+/* Keep existing styles and add these responsive adjustments */
+@media (max-width: 768px) {
+  .navbar-brand img {
+    height: 40px;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero p {
+    font-size: 1.2rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+} 
